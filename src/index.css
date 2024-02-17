@@ -17,10 +17,11 @@
 }
 * {
   scroll-behavior: smooth;
-  background-color: #ffffff;
+  
 }
 body {
   overflow-y: scroll;
+  background-color: #fff;
 }
 
 h1 {
@@ -39,8 +40,8 @@ header {
   width: 100%;
   z-index: 55;
   background-color: #ffffff;
-  box-shadow: ;
 }
+
 
 .logo-wrapper {
   width: 30px;
@@ -62,7 +63,7 @@ header {
   font-size: 1.3rem;
 }
 .home-wrapper {
-  padding-inline: 25px;
+  padding-inline: 45px;
 }
 .home {
   display: flex;
@@ -143,28 +144,54 @@ header {
   font-size: 1.8em;
   margin: 20px 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  overflow: hidden;
+  border-radius: 5px;
 }
-
 .links::before {
   content: "";
+  display: block;
+  width: 150%;
+  height: 80%;
   position: absolute;
-  bottom: 0;
-  display: inline-block;
-  width: 45px;
-  height: 3px;
-  border-radius: 3px;
-  background-color: red;
-  animation: leftoright 5s linear infinite;
+  background: linear-gradient(to top, #b0afdc, #ffe6e6);
+  animation: rotate 5s linear infinite;
+  /* z-index: 5; */
+  transform-origin: center;
+  /* rotate: 90deg; */
 }
 
-@keyframes leftoright {
+.links a {
+  position: relative;
+  /* z-index: 5; */
+  /* border: 3px solid transparent; */
+  padding: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+footer svg {
+  fill: #eaf3fa;
+  transform: rotateY(-180deg);
+  background-color: #fff;
+}
+footer {
+  min-height: 30vh;
+  background-color: #eaf3fa;
+}
+
+footer .wrapper{
+  padding: 0 25px 15px 25px;
+}
+
+
+@keyframes rotate {
   0% {
-    left: 0%;
-  }
-  50% {
-    left: calc(100% - 45px);
+    transform: rotate(0deg);
   }
   100% {
-    left: 0%;
+    transform: rotate(360deg);
   }
 }

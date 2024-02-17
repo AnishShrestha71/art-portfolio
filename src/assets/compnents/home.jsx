@@ -1,6 +1,7 @@
 import React from "react";
 import homeImg from "../images/home-image.png";
 import aboutImg from "../images/about.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -73,7 +74,9 @@ function Home() {
           </div>
         </section>
         <div className="flex justify-center">
-        <p className="links">Visit My Gallery</p>
+          <div className="links">
+            <Link to="/about">Visit My Gallery</Link>
+          </div>
         </div>
       </div>
     </>

@@ -7,9 +7,8 @@ import About from "./assets/compnents/about";
 import logoImg from "./assets/images/logo.png";
 import Home from "./assets/compnents/home";
 
-
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,21 +28,21 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      <h1>deploy changes</h1>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p></p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div style={{ height: "450px" }}></div>
-      <div id="skills" style={{ height: "145px", backgroundColor: "red" }}>
-        body section
-      </div>
+      <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill-opacity="1"
+            d="M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,122.7C672,117,768,139,864,170.7C960,203,1056,245,1152,240C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+        <div className="wrapper">
+          <div>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:bivhutipahari@gmail.com">bivhutipahari@gmail.com</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/_bvhuti_/" target="_blank">_bvhuti_</a></p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
