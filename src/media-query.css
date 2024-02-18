@@ -4,6 +4,9 @@
     flex-direction: column-reverse;
     align-items: flex-start;
   }
+  .home {
+    height: auto;
+  }
   h1 {
     font-size: 1.5em;
   }
@@ -17,16 +20,50 @@
     align-items: baseline;
   }
 
-  p,
-  .links a {
+  p{
     font-size: 14px;
   }
-  .menu-links a {
-    font-size: 0.8em;
+  .menu-links a{
+    font-size: 1em;
+  }
+  .links a {
+    font-size: 1rem;
   }
 
   .home-wrapper,
   .gallery-wrapper {
     padding-inline: 15px;
+  }
+  .home >div img{
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 641px) {
+  .home > div:nth-child(1) {
+    width: 40% !important;
+  }
+  .home > div:nth-child(2) {
+    width: 60% !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-wrapper,
+  .gallery-wrapper {
+    padding-inline: 20px;
+  }
+
+  .about p{
+    font-size: 16px;
+  }
+
+  .home >div img{
+    right: auto;
   }
 }

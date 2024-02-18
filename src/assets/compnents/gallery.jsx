@@ -28,7 +28,7 @@ function Gallery({ list }) {
           <option value="portrait">Portrait</option>
           <option value="canvas">Canvas</option>
         </select>
-        <div className="arts-wrapper grid grid-cols-4 grid-flow-row gap-6">
+        <div className="arts-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6">
           {filteredList.map((item, index) => (
             <div className="cards" key={index}>
               <img

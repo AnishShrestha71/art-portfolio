@@ -19,7 +19,7 @@ function Home() {
           <div className="justify-end ">
             <img
               className="relative"
-              style={{ right: "-25px" }}
+              // style={{ right: "-25px" }}
               src={homeImg}
               alt=""
             />
