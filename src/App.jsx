@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import About from "./assets/compnents/about";
-import logoImg from "./assets/images/logo.png";
+import logoImg from "/images/logo.png";
 import Home from "./assets/compnents/home";
 import Gallery from "./assets/compnents/gallery";
 

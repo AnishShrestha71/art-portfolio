@@ -32,7 +32,7 @@ function Gallery({ list }) {
           {filteredList.map((item, index) => (
             <div className="cards" key={index}>
               <img
-                src={`src/assets/images/${item.src}`}
+                src={`images/${item.src}`}
                 alt={`Image ${index}`}
               />
             </div>
