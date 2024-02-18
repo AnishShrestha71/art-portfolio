@@ -1,0 +1,32 @@
+@media (max-width: 640px) {
+  .home,
+  .about {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+
+  .home div,
+  .about div {
+    width: 100% !important;
+    align-items: baseline;
+  }
+
+  p,
+  .links a {
+    font-size: 14px;
+  }
+  .menu-links a {
+    font-size: 0.8em;
+  }
+
+  .home-wrapper,
+  .gallery-wrapper {
+    padding-inline: 15px;
+  }
+}

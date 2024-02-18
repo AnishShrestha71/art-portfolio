@@ -6,10 +6,13 @@ import { Link, Route, Routes } from "react-router-dom";
 import About from "./assets/compnents/about";
 import logoImg from "./assets/images/logo.png";
 import Home from "./assets/compnents/home";
+import Gallery from "./assets/compnents/gallery";
 
 function App() {
   // const [count, setCount] = useState(0);
+  const galleryList = [{'category' : 'portrait', 'src' : 'about.jpg'}, {'category' : 'canvas', 'src' : 'about.jpg'}, {'category' : 'portrait', 'src' : 'about.jpg'}];
 
+  // console.log(galleryList);
   return (
     <>
       <header className="md:flex justify-between">
@@ -19,7 +22,7 @@ function App() {
         <div className="menu-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/about">Skills</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/about">Arts</Link>
           <Link to="/about">Contact</Link>
         </div>
@@ -27,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery list={galleryList} />} />
       </Routes>
       <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -38,8 +42,18 @@ function App() {
         <div className="wrapper">
           <div>
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:bivhutipahari@gmail.com">bivhutipahari@gmail.com</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/_bvhuti_/" target="_blank">_bvhuti_</a></p>
+            <p>
+              Email:{" "}
+              <a href="mailto:bivhutipahari@gmail.com">
+                bivhutipahari@gmail.com
+              </a>
+            </p>
+            <p>
+              Instagram:{" "}
+              <a href="https://www.instagram.com/_bvhuti_/" target="_blank">
+                _bvhuti_
+              </a>
+            </p>
           </div>
         </div>
       </footer>

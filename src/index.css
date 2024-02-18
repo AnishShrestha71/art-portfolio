@@ -17,6 +17,7 @@
 }
 * {
   scroll-behavior: smooth;
+  color: #000;
   
 }
 body {
@@ -62,7 +63,8 @@ header {
   display: block;
   font-size: 1.3rem;
 }
-.home-wrapper {
+.home-wrapper,
+.gallery-wrapper {
   padding-inline: 45px;
 }
 .home {
@@ -118,7 +120,7 @@ header {
 }
 
 .cards {
-  background-color: red;
+  background-color: #eaf3fa;
   /* padding: 2rem; */
   border-radius: 5px;
   border-top-left-radius: 20px;
@@ -186,6 +188,12 @@ footer .wrapper{
   padding: 0 25px 15px 25px;
 }
 
+
+.menu-title{
+  display: flex;
+  align-items: center;
+  min-height: 30vh;
+}
 
 @keyframes rotate {
   0% {

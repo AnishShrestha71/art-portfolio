@@ -46,7 +46,7 @@ function Home() {
         </div>
         <section id="arts">
           <h1 className="title">Arts</h1>
-          <div className="arts-wrapper grid grid-cols-4 grid-flow-row gap-6">
+          <div className="arts-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6">
             <div className="cards">
               <img src={aboutImg} alt="" srcset="" />
             </div>
@@ -75,7 +75,7 @@ function Home() {
         </section>
         <div className="flex justify-center">
           <div className="links">
-            <Link to="/about">Visit My Gallery</Link>
+            <Link to="/gallery">Visit My Gallery</Link>
           </div>
         </div>
       </div>
