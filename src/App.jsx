@@ -10,23 +10,61 @@ import Gallery from "./assets/compnents/gallery";
 
 function App() {
   // const [count, setCount] = useState(0);
-  const galleryList = [{'category' : 'portrait', 'src' : 'about.jpg'}, {'category' : 'canvas', 'src' : 'about.jpg'}, {'category' : 'portrait', 'src' : 'about.jpg'}];
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [showMenuLink, setShowMenuLink] = useState(false);
+  const galleryList = [
+    { category: "portrait", src: "about.jpg" },
+    { category: "canvas", src: "about.jpg" },
+    { category: "portrait", src: "about.jpg" },
+  ];
 
-  // console.log(galleryList);
+  const showMenu = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  const handleLinkClick = ()=>{
+    setToggleMenu(false);
+  }
+  const isMobDevice = window.innerWidth < 767;
+
   return (
     <>
-      <header className="md:flex justify-between">
+      <header className="flex justify-between">
         <div className="logo-wrapper">
           <img className="logo" src={logoImg} alt="" srcset="" />
         </div>
-        <div className="menu-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/about">Arts</Link>
-          <Link to="/about">Contact</Link>
+        <div
+          className={
+            "menu-links " +
+            (isMobDevice && toggleMenu ? "show-link" : "hide-link")
+          }
+        >
+          <Link to="/" onClick={isMobDevice ? handleLinkClick : null}>
+            Home
+          </Link>
+          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
+            About
+          </Link>
+          <Link to="/gallery" onClick={isMobDevice ? handleLinkClick : null}>
+            Gallery
+          </Link>
+          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
+            Arts
+          </Link>
+          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
+            Contact
+          </Link>
+        </div>
+        <div
+          class={"burger" + (toggleMenu ? " toggle" : "")}
+          onClick={showMenu}
+        >
+          <div class="line1 burger-div"></div>
+          <div class="line2 burger-div"></div>
+          <div class="line3 burger-div"></div>
         </div>
       </header>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

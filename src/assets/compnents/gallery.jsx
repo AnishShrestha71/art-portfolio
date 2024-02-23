@@ -22,7 +22,7 @@ function Gallery({ list }) {
         Category:
         <select
           onChange={filterChanged}
-          className="w-1/4 inline-block border border-gray-300 ml-2 mb-4 rounded p-2"
+          className="w-1/4 inline-block border border-gray-300 ml-2 mb-4 rounded p-2 bg-white"
         >
           <option value="all">All</option>
           <option value="portrait">Portrait</option>
