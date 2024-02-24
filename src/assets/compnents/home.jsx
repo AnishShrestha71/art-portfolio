@@ -10,7 +10,12 @@ import homeArt5 from "/bivhuti-arts/couple-portrait2.jpg";
 import homeArt6 from "/bivhuti-arts/couple-portrait3.jpg";
 import homeArt7 from "/bivhuti-arts/baby.jpg";
 import homeArt8 from "/bivhuti-arts/canvas10.jpg";
-
+import LightGallery from "lightgallery/react";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 function Home() {
   return (
     <>
@@ -54,31 +59,54 @@ function Home() {
         </div>
         <section id="arts">
           <h1 className="title">Arts</h1>
-          <div className="arts-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6">
-            <div className="cards">
-              <img src={homeArt1} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt2} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt3} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt4} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt5} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt6} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt7} alt="" srcset="" />
-            </div>
-            <div className="cards">
-              <img src={homeArt8} alt="" srcset="" />
-            </div>
+          <div className="arts-wrapper">
+            <LightGallery
+              // onInit={onInit}
+              speed={500}
+              plugins={[lgThumbnail, lgZoom]}
+              elementClassNames=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6"
+            >
+              <a href={homeArt1}>
+                <div className="cards">
+                  <img src={homeArt1} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt2}>
+                <div className="cards">
+                  <img src={homeArt2} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt3}>
+                <div className="cards">
+                  <img src={homeArt3} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt4}>
+                <div className="cards">
+                  <img src={homeArt4} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt5}>
+                <div className="cards">
+                  <img src={homeArt5} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt6}>
+                <div className="cards">
+                  <img src={homeArt6} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt7}>
+                <div className="cards">
+                  <img src={homeArt7} alt="" srcset="" />
+                </div>
+              </a>
+              <a href={homeArt8}>
+                <div className="cards">
+                  <img src={homeArt8} alt="" srcset="" />
+                </div>
+              </a>
+            </LightGallery>
           </div>
         </section>
         <div className="flex justify-center">

@@ -61,9 +61,11 @@ header {
   gap: 30px;
 }
 
-.menu-links a {
+.menu-links a,
+.menu-links p {
   display: block;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 .home-wrapper,
 .gallery-wrapper {
@@ -220,6 +222,10 @@ footer .wrapper {
   display: flex;
   align-items: center;
   min-height: 30vh;
+}
+
+.lg-counter span{
+  color: #fff;
 }
 
 @keyframes rotate {

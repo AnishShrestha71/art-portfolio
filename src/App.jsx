@@ -42,11 +42,19 @@ function App() {
     setToggleMenu(!toggleMenu);
   };
 
-  const handleLinkClick = ()=>{
+  const scrollto = () => {
     setToggleMenu(false);
-  }
+  };
   const isMobDevice = window.innerWidth < 767;
 
+  const handleLinkClick = (id = "") => {
+    if (isMobDevice) {
+      setToggleMenu(false);
+    }
+    if(id != ""){
+      document.querySelector(`#${id}`).scrollIntoView()
+    }
+  };
   return (
     <>
       <header className="flex justify-between">
@@ -59,15 +67,16 @@ function App() {
             (isMobDevice && toggleMenu ? "show-link" : "hide-link")
           }
         >
-          <Link to="/" onClick={isMobDevice ? handleLinkClick : null}>
+          <Link to="/" onClick={() => handleLinkClick()}>
             Home
           </Link>
-          <Link to="/gallery" onClick={isMobDevice ? handleLinkClick : null}>
+          <Link to="/gallery" onClick={() => handleLinkClick()}>
             Gallery
           </Link>
-          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
+          <Link to="/about" onClick={() => handleLinkClick()}>
             About
           </Link>
+          <p onClick={() => handleLinkClick("contact")}>Contact</p>
         </div>
         <div
           class={"burger" + (toggleMenu ? " toggle" : "")}
@@ -91,7 +100,7 @@ function App() {
             d="M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,122.7C672,117,768,139,864,170.7C960,203,1056,245,1152,240C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-        <div className="wrapper">
+        <div id="contact" className="wrapper">
           <div>
             <h2>Contact</h2>
             <p>
