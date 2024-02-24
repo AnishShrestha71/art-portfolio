@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,7 +9,7 @@ import Home from "./assets/compnents/home";
 import Gallery from "./assets/compnents/gallery";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const isLoadingRef = useRef(true);
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showMenuLink, setShowMenuLink] = useState(false);
   const galleryList = [
@@ -42,21 +42,24 @@ function App() {
     setToggleMenu(!toggleMenu);
   };
 
-  const scrollto = () => {
-    setToggleMenu(false);
-  };
   const isMobDevice = window.innerWidth < 767;
 
   const handleLinkClick = (id = "") => {
     if (isMobDevice) {
       setToggleMenu(false);
     }
-    if(id != ""){
-      document.querySelector(`#${id}`).scrollIntoView()
+    if (id != "") {
+      document.querySelector(`#${id}`).scrollIntoView();
     }
   };
+
+  useEffect(() => {
+    isLoadingRef.current = false;
+  }, []);
+
   return (
     <>
+      
       <header className="flex justify-between">
         <div className="logo-wrapper">
           <img className="logo" src={logoImg} alt="" srcset="" />
@@ -64,7 +67,11 @@ function App() {
         <div
           className={
             "menu-links " +
-            (isMobDevice && toggleMenu ? "show-link" : "hide-link")
+            (isMobDevice && toggleMenu
+              ? "show-link"
+              : !isLoadingRef.current
+              ? "hide-link"
+              : "")
           }
         >
           <Link to="/" onClick={() => handleLinkClick()}>
@@ -87,7 +94,6 @@ function App() {
           <div class="line3 burger-div"></div>
         </div>
       </header>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

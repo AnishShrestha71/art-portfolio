@@ -47,7 +47,6 @@ function Gallery({ list }) {
                 <div className="cards" key={index}>
                   <img
                     src={`bivhuti-arts/${item.src}`}
-                    alt={`Image ${index}`}
                   />
                 </div>
               </a>

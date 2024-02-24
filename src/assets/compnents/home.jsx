@@ -29,7 +29,7 @@ function Home() {
               <h2>Welcome to my art world</h2>
             </div>
           </div>
-          <div className="justify-end ">
+          <div className="justify-end self-img">
             <img
               className="relative"
               // style={{ right: "-25px" }}
