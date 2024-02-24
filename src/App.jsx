@@ -13,9 +13,29 @@ function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showMenuLink, setShowMenuLink] = useState(false);
   const galleryList = [
-    { category: "portrait", src: "about.jpg" },
-    { category: "canvas", src: "about.jpg" },
-    { category: "portrait", src: "about.jpg" },
+    { category: "portrait", src: "boy1-portrait.jpg" },
+    { category: "portrait", src: "boy2-portrait.jpg" },
+    { category: "portrait", src: "boy3-portrait.jpg" },
+    { category: "portrait", src: "boy4-portrait.jpg" },
+    { category: "portrait", src: "boy5-portrait.jpg" },
+    { category: "portrait", src: "boy6-portrait.jpg" },
+    { category: "portrait", src: "couple-portrait.jpg" },
+    { category: "portrait", src: "couple-portrait2.jpg" },
+    { category: "portrait", src: "couple-portrait3.jpg" },
+    { category: "portrait", src: "girl1-portrait.jpg" },
+    { category: "portrait", src: "girl2-portrait.jpg" },
+    { category: "portrait", src: "baby.jpg" },
+    { category: "canvas", src: "canvas1.jpg" },
+    { category: "canvas", src: "canvas2.jpg" },
+    { category: "canvas", src: "canvas3.jpg" },
+    { category: "canvas", src: "canvas4.jpg" },
+    { category: "canvas", src: "canvas5.jpg" },
+    { category: "canvas", src: "canvas6.jpg" },
+    { category: "canvas", src: "canvas7.jpg" },
+    { category: "canvas", src: "canvas8.jpg" },
+    { category: "canvas", src: "canvas9.jpg" },
+    { category: "canvas", src: "canvas10.jpg" },
+    { category: "canvas", src: "buddha.jpg" },
   ];
 
   const showMenu = () => {
@@ -42,17 +62,11 @@ function App() {
           <Link to="/" onClick={isMobDevice ? handleLinkClick : null}>
             Home
           </Link>
-          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
-            About
-          </Link>
           <Link to="/gallery" onClick={isMobDevice ? handleLinkClick : null}>
             Gallery
           </Link>
           <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
-            Arts
-          </Link>
-          <Link to="/about" onClick={isMobDevice ? handleLinkClick : null}>
-            Contact
+            About
           </Link>
         </div>
         <div

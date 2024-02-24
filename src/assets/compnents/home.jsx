@@ -2,6 +2,14 @@ import React from "react";
 import homeImg from "/images/home-image.png";
 import aboutImg from "/images/about.jpg";
 import { Link } from "react-router-dom";
+import homeArt1 from "/bivhuti-arts/buddha.jpg";
+import homeArt2 from "/bivhuti-arts/boy5-portrait.jpg";
+import homeArt3 from "/bivhuti-arts/canvas5.jpg";
+import homeArt4 from "/bivhuti-arts/couple-portrait.jpg";
+import homeArt5 from "/bivhuti-arts/couple-portrait2.jpg";
+import homeArt6 from "/bivhuti-arts/couple-portrait3.jpg";
+import homeArt7 from "/bivhuti-arts/baby.jpg";
+import homeArt8 from "/bivhuti-arts/canvas10.jpg";
 
 function Home() {
   return (
@@ -48,28 +56,28 @@ function Home() {
           <h1 className="title">Arts</h1>
           <div className="arts-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6">
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt1} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt2} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt3} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt4} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt5} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt6} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt7} alt="" srcset="" />
             </div>
             <div className="cards">
-              <img src={aboutImg} alt="" srcset="" />
+              <img src={homeArt8} alt="" srcset="" />
             </div>
           </div>
         </section>
