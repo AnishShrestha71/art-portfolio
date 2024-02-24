@@ -1,4 +1,11 @@
 import React, { useState } from "react";
+import LightGallery from "lightgallery/react";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
 function Gallery({ list }) {
   const [filterVal, setfilterVal] = useState("all");
   const filterChanged = (e) => {
@@ -28,15 +35,24 @@ function Gallery({ list }) {
           <option value="portrait">Portrait</option>
           <option value="canvas">Canvas</option>
         </select>
-        <div className="arts-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6">
-          {filteredList.map((item, index) => (
-            <div className="cards" key={index}>
-              <img
-                src={`bivhuti-arts/${item.src}`}
-                alt={`Image ${index}`}
-              />
-            </div>
-          ))}
+        <div className="arts-wrapper">
+          <LightGallery
+            // onInit={onInit}
+            speed={500}
+            plugins={[lgThumbnail, lgZoom]}
+            elementClassNames=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6"
+          >
+            {filteredList.map((item, index) => (
+              <a href={`bivhuti-arts/${item.src}`}>
+                <div className="cards" key={index}>
+                  <img
+                    src={`bivhuti-arts/${item.src}`}
+                    alt={`Image ${index}`}
+                  />
+                </div>
+              </a>
+            ))}
+          </LightGallery>
         </div>
       </div>
     </>
