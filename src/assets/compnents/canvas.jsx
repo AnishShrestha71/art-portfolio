@@ -122,7 +122,9 @@ function Canvas() {
       context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
       // context.fillStyle = this.color;
       // context.fill();
+      context.lineWidth = 2;
       context.strokeStyle = this.color;
+      context.lineCap = "round";
       context.stroke();
       context.closePath();
     };
