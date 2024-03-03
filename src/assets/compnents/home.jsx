@@ -1,6 +1,6 @@
 import React from "react";
 import homeImg from "/images/home-image.png";
-import aboutImg from "/images/about.jpg";
+import aboutImg from "/images/about.png";
 import { Link } from "react-router-dom";
 import homeArt1 from "/bivhuti-arts/buddha.jpg";
 import homeArt2 from "/bivhuti-arts/boy5-portrait.jpg";
@@ -16,9 +16,11 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import Canvas from "./canvas";
 function Home() {
   return (
     <>
+      <Canvas />
       <div className="home-wrapper">
         <div className="home">
           <div>

@@ -70,6 +70,8 @@ header {
 .home-wrapper,
 .gallery-wrapper {
   padding-inline: 45px;
+  position: relative;
+  z-index: 10;
 }
 .home {
   display: flex;
@@ -181,6 +183,7 @@ header {
   padding: 4px;
   overflow: hidden;
   border-radius: 5px;
+  
 }
 .links::before {
   content: "";
@@ -216,6 +219,8 @@ footer {
 
 footer .wrapper {
   padding: 0 25px 15px 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .menu-title {
@@ -228,6 +233,11 @@ footer .wrapper {
   color: #fff;
 }
 
+.canvas-page{
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
