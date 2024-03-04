@@ -148,7 +148,7 @@ function Canvas() {
   function init() {
     particles = [];
 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
       const radius = 15;
       let x = randomIntFromRange(radius, canvasRef.current.width - radius);
       let y = randomIntFromRange(radius, canvasRef.current.height - radius);
