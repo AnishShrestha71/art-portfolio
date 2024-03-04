@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // art-portfolio/
 export default defineConfig({
   plugins: [react()],
-  base: "/"
+  base: "/art-portfolio/"
 })
