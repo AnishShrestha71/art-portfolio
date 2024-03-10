@@ -32,7 +32,8 @@ function Gallery({ list }) {
           className="w-1/4 inline-block border border-gray-300 ml-2 mb-4 rounded p-2 bg-white"
         >
           <option value="all">All</option>
-          <option value="portrait">Portrait</option>
+          <option value="portrait">Pencil Sketch</option>
+          <option value="couple-portrait">Couple Pencil Sketch</option>
           <option value="canvas">Canvas</option>
         </select>
         <div className="arts-wrapper">
