@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 function Canvas() {
   const canvasRef = useRef(null);
   const [context, setContext] = useState(null);
-  const colors = ['#FB3640',   '#1F487E', '#247BA0'];
+  const colors = ['#ffa8ad', '#6e85a3', '#cfd69b'];
   const mouse = {
     x: document.documentElement.clientWidth / 2,
     y: document.documentElement.clientHeight / 2,

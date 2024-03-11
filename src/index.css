@@ -214,7 +214,10 @@ footer svg {
 }
 footer {
   min-height: 30vh;
-  background-color: #eaf3fa;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  /* background-color: #eaf3fa; */
 }
 
 footer .wrapper {

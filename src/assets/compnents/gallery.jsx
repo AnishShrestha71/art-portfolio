@@ -34,7 +34,7 @@ function Gallery({ list }) {
           <option value="all">All</option>
           <option value="portrait">Pencil Sketch</option>
           <option value="couple-portrait">Couple Pencil Sketch</option>
-          <option value="canvas">Canvas</option>
+          <option value="canvas">Acrylic Canvas Painting</option>
         </select>
         <div className="arts-wrapper">
           <LightGallery

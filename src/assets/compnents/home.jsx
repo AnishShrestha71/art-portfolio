@@ -26,7 +26,7 @@ function Home() {
           <div>
             <div>
               <h1>
-                Hi <br /> I am Bivhuti Pahari
+                Hi Everyone!<br /> I am Bivhuti Pahari
               </h1>
               <h2>Welcome to my art world</h2>
             </div>
@@ -45,18 +45,19 @@ function Home() {
             <img src={aboutImg} alt="" srcset="" />
           </div>
           <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              pariatur et nemo doloribus veniam. Vero tenetur similique
-              exercitationem laborum culpa nihil quae autem nostrum, modi enim
-              facilis eveniet omnis illum. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Voluptatem expedita aspernatur
-              itaque saepe, ut natus sunt accusamus illum velit, soluta earum
-              quisquam sapiente animi exercitationem odio harum dolorem incidunt
-              sed provident. Similique, soluta iste ea corporis ab voluptatibus
-              laboriosam dolore tempora neque perferendis ipsum quaerat placeat,
-              temporibus doloribus autem? Commodi.
+            <p className="text-lg md:text-2xl mt-2">
+              Embark in this beautiful world with me, where art is more than a
+              medium- it's an intimate expression of emotions, a dance of colors
+              and a mirror reflecting the beauty of existence. In every stroke,
+              i weave the threads for my unwavering love for art- transforming
+              passion into vivid expressions on canvas.
             </p>
+            <p className="text-lg md:text-2xl mt-2">
+              For inquires and to place an order, feel free to send direct
+              message. Your personalized piece of art awaits, a unique
+              expression crafted just for you and your loved ones!
+            </p>
+            <p className="text-lg md:text-2xl mt-2">Thank You!</p>
           </div>
         </div>
         <section id="arts">
