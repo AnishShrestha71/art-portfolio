@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 // import About from "./assets/compnents/about";
@@ -11,7 +9,6 @@ import Gallery from "./assets/compnents/gallery";
 function App() {
   const isLoadingRef = useRef(true);
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showMenuLink, setShowMenuLink] = useState(false);
 
   const galleryList = [
     { category: "portrait", src: "boy5-portrait.jpg" },
@@ -103,7 +100,7 @@ function App() {
           </div>
         </header>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home showCanvas={true} />} />
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/gallery" element={<Gallery list={galleryList} />} />
         </Routes>

@@ -168,7 +168,7 @@ function Canvas() {
       }
       particles.push(new Particle(x, y, radius, color));
     }
-    console.log(particles);
+    // console.log(particles);
   }
   useEffect(() => {
     let animationFrameId;
